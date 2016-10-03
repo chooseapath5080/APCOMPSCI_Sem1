@@ -17,6 +17,6 @@ public class Scope
 	
 	public static void method1 ()
 	{
-		System.out.println(var1 + var2 + "and" + var3);
+		System.out.println(var1 + var2 + " and " + var3 + ".");
 	}
 }
