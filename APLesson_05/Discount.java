@@ -29,29 +29,33 @@ public class Discount
 		String i4 = kb.nextLine();
 		System.out.println("Item 4 Price?");
 		double p4 = kb.nextDouble();
-		kb.nextLine();
 		
-		double total = p1 + p2 + p3 + p4; 
-		
-		double discount = discount(total);
+		double subtotal = p1 + p2 + p3 + p4; 
+		double discount = discount(subtotal);
+		double tax = (subtotal-discount)*0.08;
+		double total = subtotal - discount + tax;
 		
 		System.out.println("<<<<<<<<< Receipt >>>>>>>>>>>");
 		format(i1, p1);
 		format(i2, p2);
 		format(i3, p3);
 		format(i4, p4);
+		format("Subtotal: ", subtotal);
 		format("Discount: ", discount);
-		System.out.println("_____________________________");
+		format("Tax: ", tax);
+		format("Total: ", total);
+		System.out.println("_________________________________");
+		System.out.println("Thank you for your service!");
 	}
 	
-	public static double discount(double total)
+	public static double discount(double subtotal)
 	{
 		double discount = 0;
-		if (total >= 2000)
+		if (subtotal >= 2000)
 		{
-			return total*0.15;
+			return subtotal*0.15;
 		}
-		if (total < 2000)
+		if (subtotal < 2000)
 		{
 			discount = 0;
 		}
