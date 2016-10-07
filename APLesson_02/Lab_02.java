@@ -11,9 +11,8 @@ public class Lab_02
 		
 		String name = "Amy Jeon\n";
 		String address = "13510 Blue Lace Trail\n";
-		String city = "San Diego\n";
-		String zip = "92130\n";
-		System.out.println(name + address + city + zip);
+		String city = "San Diego, CA 92130\n";
+		System.out.println(name + address + city);
 		
 		int l = 3;
 		int w = 4;
