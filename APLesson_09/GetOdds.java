@@ -34,7 +34,7 @@ public class GetOdds
 		String odds = "";
 		for(int number: numbers)
 		{
-			//adding int to String converts integer into a String
+			//adding int to String converts integer into a String (concatenation)
 			if(number%2==1)
 				odds += number + " ";
 		}
