@@ -16,8 +16,8 @@ public class AverageDigits
 		int num = number;
 		while(num>0)
 		{
-			digits += 1;
-			average += digits%10;
+			digits ++;
+			average += num%10;
 			num /= 10;
 		}
 		return average/digits;
