@@ -12,7 +12,9 @@ public class MilesPerHourRunner
 		int minutes = kb.nextInt();
 		
 		MilesPerHour object = new MilesPerHour(distance, hours, minutes);
+		System.out.println(object.getDistance()+" miles in "+object.getHours() +" = "+object.getMPH());
 		
+		object.setValues(5, 6, 7);
 		System.out.println(object.getDistance()+" miles in "+object.getHours() +" = "+object.getMPH());
 	}
 }
