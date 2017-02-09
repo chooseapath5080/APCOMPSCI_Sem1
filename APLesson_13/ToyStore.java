@@ -1,4 +1,3 @@
-import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.Arrays;
 public class ToyStore
@@ -16,12 +15,10 @@ public class ToyStore
 	}
 	
 	public void loadToys(String ts)
-	{
-		
-		System.out.println("");
-		
+	{	
+		toyList = new ArrayList<>();	
 		ArrayList <String> toys = new ArrayList(Arrays.asList(ts.split(",")));
-		for(int i = 0; i <= toys.size(); i++)
+		for(int i = 0; i < toys.size(); i+=2)
 		{
 			String name = toys.get(i);
 			String type = toys.get(i+1);
@@ -53,9 +50,9 @@ public class ToyStore
 				return null;
 	}
 	
-	public String getMostFrequentToy(String nm)
+	public String getMostFrequentToy()
 	{
-		String name;
+		String name = "";
 		int max = Integer.MIN_VALUE;
 		for(Toy ts : toyList)
 		{
@@ -65,7 +62,7 @@ public class ToyStore
 				name = ts.getName();
 			}
 		}
-		return nm;
+		return name;
 	}
 	
 	public String getMostFrequentType()
@@ -76,7 +73,7 @@ public class ToyStore
 		{
 			if(ts.getType().equals("Car"))
 				cars ++;
-			if(ts.getType().equals("AF"))
+			if(ts.getType().equals("Action Figure"))
 				figures ++;
 		}
 		
