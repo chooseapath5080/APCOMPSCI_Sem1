@@ -20,7 +20,7 @@ public abstract class Toy
 		return this.name;
 	}
 	
-	public double getCount()
+	public int getCount()
 	{
 		return this.count;
 	}
@@ -32,13 +32,13 @@ public abstract class Toy
 	
 	public void setCount(int c)
 	{
-		this.count = c;
+		this.count += c;
 	}
 	
 	public abstract String getType();
 	
 	public String toString()
 	{
-		return name + " " + count;
+		return this.name + " " + this.count;
 	}
 }
