@@ -17,6 +17,6 @@ public class StudentAdvance extends Advance
 	
 	public String toString()
 	{
-		return "\nStudent ID Required";
+		return "Student ID Required";
 	}
 }
