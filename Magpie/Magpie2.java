@@ -82,19 +82,33 @@ public class Magpie2
 					set before = the slot in phrase before psn */
 
 				String phrase = statement.trim().toLowerCase();
-				int psn = 
-
+				int psn = phrase.indexOf(goal, startPos);
+				goal = goal.toLowerCase();
+		
+				while(psn >= 0)
+				{
+					if(psn > 0)
+						no check
+					before = phrase.
+				}
 				/*check if you can fit goal into the rest of phrase - no need to
 				proceed otherwise
 					set after = the slot in phrase after psn + length of goal */
 
-				//=====> code here
+				if(goal)
+				{
+					
+				}
 
 				/* if before and after are not letters (compare before to "a"
 					and after to "z")
 						--return psn
 
 				Otherwise, search for goal in phrase from psn + 1 forward */
+				if(before, after)
+					return psn;
+				else
+					search for goal
 
 		return -1;
 
