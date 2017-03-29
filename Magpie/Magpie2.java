@@ -54,7 +54,17 @@ public class Magpie2
 		 * Create addtional code (another else if) that
 		 * responds "He sounds like a pretty dank teacher"
 		 * if you mention "Robinette" in your statement */
-
+		else if (findKeyword(statement, "cat") >= 0||
+				findKeyword(statement, "dog") >= 0|| 
+				findKeyword(statement, "fish") >= 0||
+				findKeyword(statement, "turtle") >= 0)
+		{
+			response = "Tell me more about your pet";
+		}
+		else if(findKeyword(statement, "Robinette") >= 0)
+		{
+			response = "He sounds like a pretty dank teacher";
+		}
 		else
 		{
 			response = getRandomResponse();
@@ -77,38 +87,39 @@ public class Magpie2
 			of goal, make sure before and after aren't letters.
 
 			As long as psn >= 0...
-				Check if psn > 0 - there is no need to check for before at the
-				beginning of the word
-					set before = the slot in phrase before psn */
+			Check if psn > 0 - there is no need to check for before at the
+			beginning of the word
+				set before = the slot in phrase before psn */
 
-				String phrase = statement.trim().toLowerCase();
-				int psn = phrase.indexOf(goal, startPos);
-				goal = goal.toLowerCase();
+		String phrase = statement.trim().toLowerCase();
+		int psn = phrase.indexOf(goal, startPos);
+		goal = goal.toLowerCase();
+
+		while(psn >= 0)
+		{
+			String before = "", after = "";
+			if(psn > 0)
+				before = phrase.substring(psn - 1, psn);
 		
-				while(psn >= 0)
-				{
-					if(psn > 0)
-						no check
-					before = phrase.
-				}
-				/*check if you can fit goal into the rest of phrase - no need to
-				proceed otherwise
-					set after = the slot in phrase after psn + length of goal */
+			/*check if you can fit goal into the rest of phrase - no need to
+			proceed otherwise
+				set after = the slot in phrase after psn + length of goal */
 
-				if(goal)
-				{
-					
-				}
+			if(psn + goal.length() < phrase.length())
+			{
+				after = phrase.substring(psn + goal.length(), psn + goal.length() + 1);
+			}
 
-				/* if before and after are not letters (compare before to "a"
-					and after to "z")
-						--return psn
+			/* if before and after are not letters (compare before to "a"
+				and after to "z")
+					--return psn
 
-				Otherwise, search for goal in phrase from psn + 1 forward */
-				if(before, after)
-					return psn;
-				else
-					search for goal
+			Otherwise, search for goal in phrase from psn + 1 forward */
+			if((before.compareTo("a") < 0 || before.compareTo("z") > 0) && 
+				(after.compareTo("a") < 0 || after.compareTo("z") > 0))
+				return psn;
+			psn = phrase.indexOf(goal, psn+1);
+		}
 
 		return -1;
 
