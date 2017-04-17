@@ -78,9 +78,9 @@ public class ToyStore
 		}
 		
 		if(cars > figures)
-			return "Cars";
-		if(figures > cars)
 			return "Action Figures";
+		if(figures > cars)
+			return "Cars";
 		else
 			return "Equal amounts of action figures and cars!";
 	}
