@@ -51,6 +51,77 @@ public class PictureTester
     swan.explore();
   }
   
+   public static void testEdgeDetection2()
+  {
+      Picture swan = new Picture("swan.jpg");
+      swan.explore();
+      swan.edgeDetection2(30);
+      swan.explore();
+  }
+  
+  public static void testMirrorVerticalRightToLeft()
+  {
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.MirrorVerticalRightToLeft();
+    beach.explore();
+  }
+  
+  public static void testMirrorHorizontal()
+  {
+    Picture motorcycle = new Picture("redMotorcycle.jpg");
+    motorcycle.explore();
+    motorcycle.MirrorHorizontal();
+    motorcycle.explore();
+  }
+  
+  public static void testMirrorHorizontalBotToTop()
+  {
+    Picture motorcycle = new Picture("redMotorcycle.jpg");
+    motorcycle.explore();
+    motorcycle.mirrorHorizontalBotToTop();
+    motorcycle.explore();
+  }
+  
+   public static void testMirrorArms()
+  {
+    Picture snowman = new Picture("snowman.jpg");
+    snowman.explore();
+    snowman.mirrorArms();
+    snowman.explore();
+  }
+  
+  public static void testMirrorGull()
+  {
+    Picture seagull = new Picture("seagull.jpg");
+    seagull.explore();
+    seagull.mirrorGull();
+    seagull.explore();
+  }
+ 
+ public static void testCopy()
+  {
+    Picture canvas = new Picture("640x480.jpg");
+    canvas.createCollage();
+    canvas.explore();
+  }
+ 
+ public static void myCollage()
+ {
+	Picture flower1 = new Picture("flower1.jpg");
+	Picture flower2 = new Picture("flower2.jpg");
+	this.copy(flower1,0,0);
+	this.copy(flower2,100,0);
+	this.copy(flower1,200,0);
+	Picture flowerNoBlue = new Picture(flower2);
+	flowerNoBlue.zeroBlue();
+	this.copy(flowerNoBlue,300,0);
+	this.copy(flower1,400,0);
+	this.copy(flower2,500,0);
+	this.mirrorVertical();
+	this.write("collage.jpg");
+ }
+ 
   /** Main method for testing.  Every class can have a main
     * method in Java */
   public static void main(String[] args)
@@ -58,22 +129,25 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
+	//testMirrorVerticalRightToLeft();
+	//testmirrorHorizontal();
+	//testMirrorHorizontalBotToTop();
+	//testMirrorDiagonal();
     testZeroBlue();
     testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
-    testNegate();
-    testGrayscale();
-    testFixUnderwater();
+    //testNegate();
+    //testGrayscale();
+    //testFixUnderwater();
     //testMirrorVertical();
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
-    //testMirrorDiagonal();
     //testCollage();
     //testCopy();
-    //testEdgeDetection();
-    //testEdgeDetection2();
+    testEdgeDetection();
+    testEdgeDetection2();
     //testChromakey();
     //testEncodeAndDecode();
     //testGetCountRedOverValue(250);
