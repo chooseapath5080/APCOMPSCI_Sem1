@@ -3,6 +3,42 @@ public class IntArrayWorker
   /** two dimensional matrix */
   private int[][] matrix = null;
   
+ public int getCount(int checkNum)
+  {
+    int count = 0;
+    for (int row = 0; row < matrix.length; row++)
+    {
+      for (int col = 0; col < matrix[0].length; col++)
+      {
+        if (matrix[row][col] == checkNum) count++;
+      }
+    }
+    return count;
+  }
+  
+  public int getLargest()
+  {
+    int largest = 0;
+    for (int row = 0; row < matrix.length; row++)
+    {
+      for (int col = 0; col < matrix[0].length; col++)
+      {
+        if (matrix[row][col] > largest) largest = matrix[row][col];
+      }
+    }
+    return largest;
+  }
+  
+ public int getColTotal(int col)
+  {
+    int total = 0;
+    for (int row = 0; row < matrix.length; row++)
+    {
+      total += matrix[row][col];
+    }
+    return total;
+  }
+  
   /** set the matrix to the passed one
     * @param theMatrix the one to use
     */
