@@ -49,12 +49,22 @@ public class Magpie2
 				|| statement.indexOf("fish") >= 0
 				|| statement.indexOf("turtle") >= 0)
 		{
-			response = "Tell me more about your fish.";
+			response = "Tell me more about your dog.";
 		}
 		
 		else if (statement.indexOf("I hate you") >=0)
 		{
 			response = "Why?";
+		}
+		
+		else if (statement.indexOf("I want to sleep.") >=0)
+		{
+			response = "What would it mean to sleep?";
+		}
+		
+		else if (statement.indexOf("You love me") >=0)
+		{
+			response = "What makes you think that I love you?";
 		}
 
 		/** Exercise_03(Final)
