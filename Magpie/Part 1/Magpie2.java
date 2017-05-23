@@ -37,11 +37,24 @@ public class Magpie2
 		}
 
 		else if (statement.indexOf("mother") >= 0
-				|| statement.indexOf("father") >= 0
+				|| statement.indexOf("Father") >= 0
 				|| statement.indexOf("sister") >= 0
 				|| statement.indexOf("brother") >= 0)
 		{
 			response = "Tell me more about your family.";
+		}
+		
+		else if (statement.indexOf("cat") >= 0
+				|| statement.indexOf("dog") >= 0
+				|| statement.indexOf("fish") >= 0
+				|| statement.indexOf("turtle") >= 0)
+		{
+			response = "Tell me more about your fish.";
+		}
+		
+		else if (statement.indexOf("I hate you") >=0)
+		{
+			response = "Why?";
 		}
 
 		/** Exercise_03(Final)
