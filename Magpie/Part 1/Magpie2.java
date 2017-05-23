@@ -52,9 +52,9 @@ public class Magpie2
 			response = "Tell me more about your dog.";
 		}
 		
-		else if (statement.indexOf("I hate you") >=0)
+		else if (statement.indexOf("I hate you.") >=0)
 		{
-			response = "Why?";
+			response = "Why do you hate me?";
 		}
 		
 		else if (statement.indexOf("I want to sleep.") >=0)
