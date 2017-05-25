@@ -25,8 +25,8 @@ public class Magpie2
 			response = "Why so negative?";
 		}
 
-		else if (statement.indexOf("mother") >= 0
-				|| statement.indexOf("father") >= 0
+		else if (statement.indexOf("Mother") >= 0
+				|| statement.indexOf("Father") >= 0
 				|| statement.indexOf("sister") >= 0
 				|| statement.indexOf("brother") >= 0)
 		{
@@ -91,12 +91,12 @@ public class Magpie2
    * "I want to ".
    * /
    * return "What would it mean to" + restOfStatement; **/
-		statement = trim.statement();
+		statement = statement.trim();
 		String lastChar = statement.substring(statement.length() - 1); 
 		if(lastChar.equals("."))
 			statement = statement.substring(0, statement.length() - 1);
 		int psn = findKeyword(statement, "I want to", 0);
-		String restOfStatement = statement.substring(psn + 9).trim();
+		String restOfStatement = statement.substring(psn);
 		return "What would it mean to " + restOfStatement + "?";
 	}
 
@@ -130,7 +130,7 @@ public class Magpie2
 			statement = statement.substring(0, statement.length() - 1);
 		int psnOfYou = findKeyword (statement, "you", 0);
 		int psnOfMe = findKeyword (statement, "me", psnOfYou + 3);
-		String restOfStatement = statement to You + 3; 
+		String restOfStatement = statement.substring(psnOfYou + 3, psnOfMe); 
 		return "What makes you think that I" + restOfStatement + "you?";
 	}
 
