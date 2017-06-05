@@ -17,6 +17,14 @@ public class PictureTester
     beach.explore();
   }
   
+    public static void testKeepOnlyBlue()
+  {
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.KeepOnlyBlue();
+    beach.explore();
+  }
+  
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
   {
@@ -31,7 +39,7 @@ public class PictureTester
   {
     Picture temple = new Picture("temple.jpg");
     temple.explore();
-    temple.mirrorTemple();
+    temple.MirrorTemple();
     temple.explore();
   }
   
@@ -41,6 +49,13 @@ public class PictureTester
     Picture canvas = new Picture("640x480.jpg");
     canvas.createCollage();
     canvas.explore();
+  }
+  
+    public static void testmyCollage()
+  {
+    Picture gorge = new Picture("gorge.jpg");
+    gorge.myCollage();
+    gorge.explore();
   }
   
   /** Method to test edgeDetection */
@@ -79,7 +94,7 @@ public class PictureTester
   {
     Picture motorcycle = new Picture("redMotorcycle.jpg");
     motorcycle.explore();
-    motorcycle.mirrorHorizontalBotToTop();
+    motorcycle.MirrorHorizontalBotToTop();
     motorcycle.explore();
   }
   
@@ -105,21 +120,21 @@ public class PictureTester
     canvas.createCollage();
     canvas.explore();
   }
- 
- public static void myCollage()
+  
+ public static void testNegate()
  {
-	Picture flower1 = new Picture("flower1.jpg");
-	Picture flower2 = new Picture("flower2.jpg");
-	this.copy(flower1,0,0);
-	this.copy(flower2,100,0);
-	this.copy(flower1,200,0);
-	Picture flowerNoBlue = new Picture(flower2);
-	flowerNoBlue.zeroBlue();
-	this.copy(flowerNoBlue,300,0);
-	this.copy(flower1,400,0);
-	this.copy(flower2,500,0);
-	this.mirrorVertical();
-	this.write("collage.jpg");
+	Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.negate();
+    beach.explore();
+ }
+ 
+ public static void testGrayscale()
+ {
+	Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.grayscale();
+    beach.explore();
  }
  
   /** Main method for testing.  Every class can have a main
@@ -129,22 +144,22 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
-	//testMirrorVerticalRightToLeft();
-	//testmirrorHorizontal();
-	//testMirrorHorizontalBotToTop();
-	//testMirrorDiagonal();
+	testMirrorVerticalRightToLeft();
+	testMirrorHorizontal();
+	testMirrorHorizontalBotToTop();
     testZeroBlue();
     testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
-    //testNegate();
-    //testGrayscale();
+    testNegate();
+    testGrayscale();
     //testFixUnderwater();
-    //testMirrorVertical();
+    testMirrorVertical();
     //testMirrorTemple();
-    //testMirrorArms();
-    //testMirrorGull();
+    testMirrorArms();
+	testMirrorGull();
     //testCollage();
+	testmyCollage();
     //testCopy();
     testEdgeDetection();
     testEdgeDetection2();

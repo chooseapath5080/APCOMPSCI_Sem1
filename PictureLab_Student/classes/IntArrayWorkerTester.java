@@ -50,6 +50,7 @@ public class IntArrayWorkerTester
     worker.setMatrix(nums2);
     int total = worker.getTotalNested();
     System.out.println("Total should be 21 and is " + total);
+	System.out.println();
   }
   
   /** Method to test getLargest */
@@ -75,6 +76,7 @@ public class IntArrayWorkerTester
    worker.setMatrix(nums5);
    largest = worker.getLargest();
    System.out.println("Largest should be 6 and is " + largest);
+   System.out.println();
  }
   
   /** Method to test getColTotal */
